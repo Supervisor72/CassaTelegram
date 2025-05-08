@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modulo Punti Vendita</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+    form { background: white; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; }
+    label { font-weight: bold; margin-top: 10px; display: block; }
+    input, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+    button { background-color: #28a745; color: white; font-weight: bold; cursor: pointer; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <form action="send_telegram.php" method="POST">
+    <label for="punto_vendita">Punto Vendita</label>
+    <select name="punto_vendita" id="punto_vendita" required>
+      <option value="">Seleziona</option>
+      <option value="Fano">Fano</option>
+      <option value="Monsano">Monsano</option>
+      <option value="Osimo">Osimo</option>
+      <option value="Macerata">Macerata</option>
+      <option value="Civitanova">Civitanova</option>
+      <option value="Pesaro">Pesaro</option>
+    </select>
+
+    <label for="orario">Orario</label>
+    <select name="orario" id="orario" required>
+      <option value="">Seleziona</option>
+      <option value="ORE 13">ORE 13</option>
+      <option value="ORE 20">ORE 20</option>
+    </select>
+
+    <label for="scontrini">Scontrini</label>
+    <input type="number" name="scontrini" id="scontrini" required />
+
+    <label for="carte_fan">Carte Fan</label>
+    <input type="number" name="carte_fan" id="carte_fan" required />
+
+    <label for="myfansafe">MyFanSafe</label>
+    <input type="number" name="myfansafe" id="myfansafe" required />
+
+    <label for="finanziamenti">Finanziamenti</label>
+    <input type="number" name="finanziamenti" id="finanziamenti" required />
+
+    <label for="mlgsafeguard">MLGSafeGuard</label>
+    <input type="number" name="mlgsafeguard" id="mlgsafeguard" required />
+
+    <button type="submit">Invia</button>
+  </form>
+</body>
+</html>
